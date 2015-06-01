@@ -18,7 +18,6 @@
 					microcomputer board that comes with GPIO IRQ and<br />
 					hardware timers support in stock firmware, among<br /> 
 					other improvements over regular OpenWRT distribution.<br />
-					<p><a href="https://github.com/blackswift/gpio-irq-dht" target="_blank">Source code</a>.
 				 <p>Besides DHT22 kernel module, there's a small userspace<br />
 					application which grabs DHT22 data once per minute (it<br />
 					uses hardware timer too) and stores it in a file.
@@ -27,7 +26,7 @@
 					possible to use sqlite3 database to store data and some PHP<br />
 					library to plot it as well.
 				 <p>Snapshots from the webcam are taken with fswebcam program.<br />
-					Webcam is a regular USB 1080p camera, connected to Black<br />
+					Webcam is Logitech C270 camera (720p), connected to Black<br />
 					Swift's microUSB port with adapter cable.
 				 <p>Typical LA is below 0.1, 29.5 MB free RAM (out of 64 MB)<br />
 					6.6 MB flash space left (out of 16 MB).
@@ -37,8 +36,8 @@
 		</tr>
 	</table>
 	<hr style="border: none; color:red; background-color:red; width: 600px; height: 3px;" />
-	<p>Current time in Moscow: <span class="time"> Mon June  1 12:16 </span>
-	<p>Current weather in Moscow: <span class="temp"> 20.7&deg;C 34.1% </span>
+	<p>Current time in Moscow: <span class="time"> Mon June  1 23:41 </span>
+	<p>Current weather in Moscow: <span class="temp"> 16.6&deg;C 51.1% </span>
 	<p>Last 60 minutes:<br />
 	<img src="img/last_60m.png" />
 	<p>Last 24 hours (15 minutes average):<br />
@@ -46,7 +45,15 @@
 	<p>Last 7 days (60 minutes average):<br />
 	<img src="img/last_7d.png" />
 	<hr style="border: none; color:red; background-color:red; width: 600px; height: 3px;" />
-	<p>A view from the camera (updates every minute):
+	<p>A snapshot from the camera (updates every minute):
 	<p><img src="img/cam.jpg" />
+	<p>Source codes:
+	<div style="width: 600px; text-align: left; margin: 0 auto">
+	<ul>
+		<li><a href="https://github.com/blackswift/gpio-dht-handler" target="_blank">DHT11/DHT22 protocol handler</a> (kernel module)</li>
+		<li><a href="https://github.com/blackswift/timer-irq-handler" target="_blank">AR9311 hardware timers</a> (kernel module)</li>
+		<li>Quick and dirty <a href="https://github.com/blackswift/example-weather" target="_blank">application example</a> (the one supplies data for the graphs above)</li>
+	</ul>
+	</div>
 </div>
 </body>
