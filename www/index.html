@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>Weather in Moscow</title>
+</head>
+<body>
+<div style="text-align: center;">
+	<table style="margin: 0 auto;">
+		<tr>
+			<td>
+				<a href="http://www.black-swift.com/" target="_blank"><img style="margin: 20px;" src="img/swiftlogo-sq.png" /></a>
+			</td>
+			<td>
+				<div style="margin: 20px;">
+					Here we are testing <a href="http://www.black-swift.com/" target="_blank">Black Swift</a>'s DHT11 and DHT22<br />
+					temperature and humidity sensor driver — based<br />
+					on GPIO IRQ and hardware timers.<br />
+				 <p>As for now, Black Swift is the only AR9331-based<br />
+					microcomputer board that comes with GPIO IRQ and<br />
+					hardware timers support in stock firmware, among<br /> 
+					other improvements over regular OpenWRT distribution.<br />
+					<p><a href="https://github.com/blackswift/gpio-irq-dht" target="_blank">Source code</a>.
+				 <p>Besides DHT22 kernel module, there's a small userspace<br />
+					application which grabs DHT22 data once per minute (it<br />
+					uses hardware timer too) and stores it in a file.
+				 <p>Graphs below are plotted with <a href="http://www.gnuplot.info/" target="_blank">gnuplot</a> software and displayed<br />
+					with lighttpd web server, both installed on Black Swift. It is<br />
+					possible to use sqlite3 database to store data and some PHP<br />
+					library to plot it as well.
+				 <p>Snapshots from the webcam are taken with fswebcam program.<br />
+					Webcam is a regular USB 1080p camera, connected to Black<br />
+					Swift's microUSB port with adapter cable.
+				 <p>Typical LA is below 0.1, 29.5 MB free RAM (out of 64 MB)<br />
+					6.6 MB flash space left (out of 16 MB).
+				 <p>This is <a href="img/SAM_1639_1000.jpg" target="_blank">how it looks like</a> (without webcam attached).
+				</div>
+			</td>
+		</tr>
+	</table>
+	<hr style="border: none; color:red; background-color:red; width: 600px; height: 3px;" />
+	<p>Current time in Moscow: <span class="time"> Mon June  1 12:16 </span>
+	<p>Current weather in Moscow: <span class="temp"> 20.7&deg;C 34.1% </span>
+	<p>Last 60 minutes:<br />
+	<img src="img/last_60m.png" />
+	<p>Last 24 hours (15 minutes average):<br />
+	<img src="img/last_24h.png" />
+	<p>Last 7 days (60 minutes average):<br />
+	<img src="img/last_7d.png" />
+	<hr style="border: none; color:red; background-color:red; width: 600px; height: 3px;" />
+	<p>A view from the camera (updates every minute):
+	<p><img src="img/cam.jpg" />
+</div>
+</body>
